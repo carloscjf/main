@@ -21,6 +21,17 @@
             align-items: center;
             padding: 25px 0px;
             background-color: #e0e6e9;
+            border-bottom: 1px solid #ccc;
+            position: fixed; /* Fixa o cabeçalho no topo */
+            top: 0; /* Mostra o cabeçalho inicialmente */
+            left: 0;
+            right: 0;
+            transition: top 0.3s; /* Adiciona uma transição suave */
+            z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+        }
+
+        header.hidden {
+            top: -100px; /* Esconde o cabeçalho */
         }
 
         header a {
@@ -29,6 +40,10 @@
             margin: 0 50px;
             font-size: 1.5rem;
             font-weight: normal;
+        }
+
+        header a:hover {
+            text-decoration: underline; /* Sublinhado ao passar o mouse */
         }
 
         .home-icon {
@@ -52,7 +67,13 @@
         }
 
         main {
-            padding: 115px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            padding: 0 20px;
+            margin-top: 100px; /* Espaço para o cabeçalho fixo */
         }
 
         h1 {
@@ -73,14 +94,6 @@
             color: #7dc542;
             font-weight: bold;
         }
-
-        .scroll-indicator {
-            margin-top: 525px;
-            font-size: 2.4rem;
-            color: #777;    
-            animation: bounce 1.5s infinite;
-        }
-
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
@@ -92,7 +105,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <!-- Ícone de casa (Font Awesome) -->
         <a href="main.html" class="home-icon"><i class="fas fa-home"></i></a>
         <nav>
@@ -100,13 +113,34 @@
             <a href="causas.html">Causas</a>
             <a href="conheça+.html">Conheça+</a>
         </nav>
-        <a href="#" class="donate-button">Doe Agora</a>
+        <!-- Botão "Doe Agora" com link de redirecionamento -->
+        <a href="https://doe.greenpeace.com.br/?cc=701Pm00000T8VcFIAV&entrypoint=botao_doe&gp_anonymous_id=8ebb566d-5544-4f74-8ac3-f8e47e464298" class="donate-button">Doe Agora</a>
     </header>
     <main>
-        <h1>Gestão Sustentável de Florestas: Um Futuro <span>Verde</span></h1>
+        <h1>Gestão Sustentável de <br>
+        Florestas: Um Futuro <span>Verde</span></h1>
         <p>A gestão sustentável de <span>florestas</span> é responsabilidade de <span>todos</span>. <br>
         Adote práticas <span>ecologicamente corretas</span>, apoie iniciativas de <span>reflorestamento</span> e faça a <span>diferença</span>.</p>
-        <div class="scroll-indicator">&#8595;</div>
     </main>
+
+    <script>
+        // JavaScript para mostrar/esconder o cabeçalho ao rolar a página
+        const header = document.getElementById('header');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Rolar para baixo: esconde o cabeçalho
+                header.classList.add('hidden');
+            } else {
+                // Rolar para cima: mostra o cabeçalho
+                header.classList.remove('hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+        });
+    </script>
 </body>
 </html>
