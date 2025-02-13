@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Sustentável de Florestas</title>
+    <!-- Link para o Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #e0e6ed;
+            color: #000;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0px;
+            background-color: #e0e6e9;
+            border-bottom: 1px solid #ccc;
+            position: fixed; /* Fixa o cabeçalho no topo */
+            top: 0; /* Mostra o cabeçalho inicialmente */
+            left: 0;
+            right: 0;
+            transition: top 0.3s; /* Adiciona uma transição suave */
+            z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+        }
+
+        header.hidden {
+            top: -100px; /* Esconde o cabeçalho */
+        }
+
+        header a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 50px;
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+
+        header a:hover {
+            text-decoration: underline; /* Sublinhado ao passar o mouse */
+        }
+
+        .home-icon {
+            font-size: 2rem; /* Tamanho maior para o ícone */
+        }
+
+        .donate-button {
+            background-color: #a5d84c;
+            color: white;
+            padding: 25px 35px;
+            border: none;
+            border-radius: 25px;
+            font-weight: normal;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .donate-button:hover {
+            background-color: #8dc63f;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            padding: 0 20px;
+            margin-top: 100px; /* Espaço para o cabeçalho fixo */
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        h1 span {
+            color: #7dc542;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: #777;
+        }
+
+        p span {
+            color: #7dc542;
+            font-weight: bold;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <!-- Ícone de casa (Font Awesome) -->
+        <a href="main.html" class="home-icon"><i class="fas fa-home"></i></a>
+        <nav>
+            <a href="sobrenos.html">Sobre nós</a>
+            <a href="causas.html">Causas</a>
+            <a href="conheça+.html">Conheça+</a>
+        </nav>
+        <a href="https://doe.greenpeace.com.br/?cc=701Pm00000T8VcFIAV&entrypoint=botao_doe&gp_anonymous_id=8ebb566d-5544-4f74-8ac3-f8e47e464298" class="donate-button">Doe Agora</a>
+    </header>
+    <main>
+        <h1>Sobre nós</h1>
+        <p>Nós, Vinícius Lucena, José Carlos e Igor Azevedo, somos um grupo de <br>
+            estudantes do IFPE - Campus Jaboatão, nosso principal objetivo <br>
+            é instruir as pessoas a terem uma vida mais sustentável para o nosso planeta, principalmente<br>
+            com o grande aumento da temperatura global da terra e a perca do efeito estufa.</p>
+    </main>
+
+    <script>
+        // JavaScript para mostrar/esconder o cabeçalho ao rolar a página
+        const header = document.getElementById('header');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Rolar para baixo: esconde o cabeçalho
+                header.classList.add('hidden');
+            } else {
+                // Rolar para cima: mostra o cabeçalho
+                header.classList.remove('hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+        });
+    </script>
+</body>
+</html>
