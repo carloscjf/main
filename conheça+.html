@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Sustentável de Florestas</title>
+    <!-- Link para o Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #e0e6ed;
+            color: #000;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0px;
+            background-color: #e0e6e9;
+            border-bottom: 1px solid #ccc;
+            position: fixed; /* Fixa o cabeçalho no topo */
+            top: 0; /* Mostra o cabeçalho inicialmente */
+            left: 0;
+            right: 0;
+            transition: top 0.6s; /* Adiciona uma transição suave */
+            z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+        }
+
+        header.hidden {
+            top: -100px; /* Esconde o cabeçalho */
+        }
+
+        header a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 50px;
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+
+        header a:hover {
+            text-decoration: underline; /* Sublinhado ao passar o mouse */
+        }
+
+        .home-icon {
+            font-size: 2rem; /* Tamanho maior para o ícone */
+        }
+
+        .donate-button {
+            background-color: #a5d84c;
+            color: white;
+            padding: 20px 35px;
+            border: none;
+            border-radius: 25px;
+            font-weight: normal;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .donate-button:hover {
+            background-color: #8dc63f;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: top;
+            height: auto;
+            padding: 0 20px;
+            margin-top: 100px; /* Espaço para o cabeçalho fixo */
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        h1 span {
+            color: #7dc542;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 2.3rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: #777;
+            padding: 50px;
+        }
+
+        p span {
+            color: #7dc542;
+            font-weight: bold;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <!-- Ícone de casa (Font Awesome) -->
+        <a href="main.html" class="home-icon"><i class="fas fa-home"></i></a>
+        <nav>
+            <a href="sobrenos.html">Sobre nós</a>
+            <a href="causas.html">Causas</a>
+            <a href="conheça+.html">Conheça+</a>
+        </nav>
+        <!-- Botão "Doe Agora" com link de redirecionamento -->
+        <a href="https://doe.greenpeace.com.br/?cc=701Pm00000T8VcFIAV&entrypoint=botao_doe&gp_anonymous_id=8ebb566d-5544-4f74-8ac3-f8e47e464298" class="donate-button">Doe Agora</a>
+    </header>
+    <main>
+        <br> <br> <br> <br> <br> <br>
+
+        <h1>Combate ao <span>Desmatamento</span> Ilegal</h1>
+        <p>Aqui você verá algumas formas para ajudar no <span>meio ambiente</span>:</p> <br>
+        <h2>Fiscalização rigorosa:</h2> 
+            <p>As autoridades precisam de ferramentas para monitorar e punir o <span>desmatamento</span> ilegal, além de combater as atividades <br>
+                 que contribuem para a <span>degradação</span>, como a extração ilegal de <span>madeira</span> e a grilagem de terras.</p>
+        <h2>Uso de tecnologias para monitoramento:</h2>
+            <p>O uso de satélites e drones para rastrear áreas desmatadas e monitorar mudanças <br>
+            na <span>cobertura florestal</span> pode aumentar a eficiência da fiscalização.</p>
+
+        <h2>Transição para Fontes de <span>Energia Renováveis</span></h2> <br> <br> <br>
+        <h3>Energias limpas e sustentáveis: </h3>
+        <p>Incentivar a produção e o consumo de energia a partir de fontes <span>renováveis</span>, <br>
+        como <span>solar</span>, <span>eólica</span> e <span>hidrelétrica</span> (de pequeno porte). Isso reduz a dependência de <span>combustíveis fósseis</span>, responsáveis <br>
+        pela emissão de <span>gases do efeito estufa</span>. </p>
+        <h3>Eficiência energética:</h3>
+        <p>Melhorar a eficiência do uso de <span>energia</span>, como o uso de tecnologias que reduzam <br>
+            o desperdício e a implementação de práticas de <span>construção sustentável</span>.</p>
+
+        <h2>Políticas Públicas e <span>Educação Ambiental</span></h2> <br> <br> <br> <br>
+        <h3>Legislação e incentivos fiscais: </h3>
+        <p> Criar e implementar leis que incentivem práticas <span>sustentáveis</span>, como a preservação de áreas <span>florestais</span> e <br>
+             o uso de tecnologias <span>limpas</span>. Subsídios para práticas agrícolas <span>sustentáveis</span> também são importantes.
+        <h3>Educação ambiental: </h3>
+        <p>Promover a conscientização e a educação sobre a importância da <span>preservação ambiental</span> <br>
+         e os impactos do <span>desmatamento</span> e do <span>efeito estufa</span>. Isso pode incluir  programas de educação nas escolas, <br>
+        campanhas de conscientização e treinamento para agricultores e empresas.</p>
+
+        <h2>Redução das Emissões de <span>Gases de Efeito Estufa</span></h2>
+        <h3>Transporte sustentável: </h3>
+            <p>Incentivar o uso de <span>transporte público</span>, <span>bicicletas</span>, <span>carros elétricos</span> e outras alternativas de transporte <br>
+                de <span>baixo carbono</span>. Isso pode ser feito por meio da construção de infraestruturas adequadas  <br>
+                (<span>ciclovias</span>, por exemplo) e incentivos para a adoção de veículos mais eficientes.</p>
+        <h3>Captura de carbono: </h3>
+        <p>Tecnologias como a <span>captura e armazenamento de carbono</span> (CCS, na sigla em inglês) podem ser uma solução emergente <br>
+            para capturar o <span>CO₂</span> emitido por usinas e outros processos industriais antes que ele seja liberado na <span>atmosfera</span>.</p>
+    </main>
+
+    <script>
+        // JavaScript para mostrar/esconder o cabeçalho ao rolar a página
+        const header = document.getElementById('header');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Rolar para baixo: esconde o cabeçalho
+                header.classList.add('hidden');
+            } else {
+                // Rolar para cima: mostra o cabeçalho
+                header.classList.remove('hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+        });
+    </script>
+</body>
+</html>
