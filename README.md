@@ -1,3 +1,3 @@
 Grupo: Vinícius Lucena Lima,
 José Carlos da Costa Ferreira Filho
-Igor de Araújo Azevedo
+e Igor de Araújo Azevedo
