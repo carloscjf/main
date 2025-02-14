@@ -19,14 +19,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 0px;
+            padding: 20px 0px;
             background-color: #e0e6e9;
             border-bottom: 1px solid #ccc;
             position: fixed; /* Fixa o cabeçalho no topo */
             top: 0; /* Mostra o cabeçalho inicialmente */
             left: 0;
             right: 0;
-            transition: top 0.3s; /* Adiciona uma transição suave */
+            transition: top 0.6s; /* Adiciona uma transição suave */
             z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
         }
 
@@ -53,7 +53,7 @@
         .donate-button {
             background-color: #a5d84c;
             color: white;
-            padding: 25px 35px;
+            padding: 20px 35px;
             border: none;
             border-radius: 25px;
             font-weight: normal;
@@ -70,8 +70,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            height: 80vh;
+            align-items: top;
+            height: auto;
             padding: 0 20px;
             margin-top: 100px; /* Espaço para o cabeçalho fixo */
         }
@@ -85,15 +85,33 @@
             color: #7dc542;
         }
 
+        h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
         p {
             font-size: 1.8rem;
             color: #777;
+            padding: 50px;
         }
 
         p span {
             color: #7dc542;
             font-weight: bold;
         }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
@@ -116,11 +134,11 @@
         <a href="https://doe.greenpeace.com.br/?cc=701Pm00000T8VcFIAV&entrypoint=botao_doe&gp_anonymous_id=8ebb566d-5544-4f74-8ac3-f8e47e464298" class="donate-button">Doe Agora</a>
     </header>
     <main>
-        <h1>Sobre nós</h1>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <h1>Sobre <span>nós</span></h1>
         <p>Nós, Vinícius Lucena, José Carlos e Igor Azevedo, somos um grupo de <br>
-            estudantes do IFPE - Campus Jaboatão, nosso principal objetivo <br>
+            estudantes do IFPE - Campus Jaboatão, nosso principal objetivo com este site<br>
             é instruir as pessoas a terem uma vida mais sustentável para o nosso planeta, principalmente<br>
-            com o grande aumento da temperatura global da terra e a perca do efeito estufa.</p>
+            com o grande aumento da temperatura global da terra e a perca do efeito estufa e monstra-lás as consequências da poluição.</p>
     </main>
 
     <script>
